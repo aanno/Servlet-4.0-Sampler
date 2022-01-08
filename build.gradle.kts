@@ -23,9 +23,14 @@ tasks {
         distributionType = Wrapper.DistributionType.ALL
     }
 
-/*
     jar {
-
+        manifest {
+            attributes(
+                "Implementation-Title" to "MyWeb Application",
+                "Implementation-Version" to "1.0",
+                "Implementation-Vendor-Id" to "com.readlearncode.servlet4.mapping",
+                "Created-By" to "Gradle"
+            )
+        }
     }
-*/
 }

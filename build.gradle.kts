@@ -63,7 +63,7 @@ Script compilation errors:
      */
 
     val sharedManifest = the<JavaPluginExtension>().manifest {
-        attributes (
+        attributes(
             "Implementation-Title" to "MyWeb Application",
             "Implementation-Version" to "1.0",
             "Implementation-Vendor-Id" to "com.readlearncode.servlet4.mapping",
@@ -86,9 +86,25 @@ Script compilation errors:
     /*
      * WORKING!
      */
+    /*
     register<War>("manifestWar") {
         manifest = project.the<JavaPluginExtension>().manifest {
             from(sharedManifest)
+        }
+    }
+     */
+
+    /*
+     * WORKING!
+     */
+    named<War>("war") {
+        manifest {
+            attributes(
+                "Implementation-Title" to "MyWeb Application",
+                "Implementation-Version" to "1.0",
+                "Implementation-Vendor-Id" to "com.readlearncode.servlet4.mapping",
+                "Created-By" to "Gradle"
+            )
         }
     }
 
@@ -107,3 +123,19 @@ Script compilation error:
     }
      */
 }
+
+/*
+ * WORKING!
+ */
+/*
+tasks.named<War>("war") {
+    manifest {
+        attributes(
+            "Implementation-Title" to "MyWeb Application",
+            "Implementation-Version" to "1.0",
+            "Implementation-Vendor-Id" to "com.readlearncode.servlet4.mapping",
+            "Created-By" to "Gradle"
+        )
+    }
+}
+ */

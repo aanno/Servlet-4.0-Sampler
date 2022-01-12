@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application id="Application_ID" version="6" xmlns="http://java.sun.com/xml/ns/javaee"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd">
+  <display-name>jakarta-ee</display-name>
+  <module id="WebModuleDeployment_1451308918333">
+    <web>
+      <web-uri>esdWar.war</web-uri>
+      <context-root>/war/root</context-root>
+    </web>
+  </module>
+  <security-role>
+    <role-name>AllRole</role-name>
+  </security-role>
+</application> 

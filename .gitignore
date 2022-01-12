@@ -124,3 +124,7 @@ nbdist/
 /.idea/
 /nb-configuration.xml
 /Servlet4Push.iml
+
+.gradle/
+/gradle.properties
+/mvnrepo/

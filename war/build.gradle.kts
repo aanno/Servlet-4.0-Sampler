@@ -38,7 +38,7 @@ tasks {
         distributionType = Wrapper.DistributionType.ALL
     }
 
-    register<War>("manifestWar") {
+    named<War>("war") {
         manifest = project.the<JavaPluginExtension>().manifest {
             attributes (
                 "Implementation-Title" to "MyWeb Application",
@@ -51,12 +51,12 @@ tasks {
 
     // needed for publishing war with given manifest
     named("generateMetadataFileForWarPublication") {
-        dependsOn("manifestWar")
+        dependsOn("war")
     }
 
     // needed for building war with given manifest
     named("build") {
-        dependsOn("manifestWar")
+        dependsOn("war")
     }
 
 }

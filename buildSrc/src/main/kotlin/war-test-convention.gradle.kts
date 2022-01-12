@@ -108,7 +108,7 @@ tasks {
     jar {
         manifest {
             attributes("Class-Path" to "test1-${project_version}.jar test2-${project_version}.jar",
-                "Comment" to  "manifest by gradle-jar-manifest-attributes")
+                "Comment1" to  "manifest by gradle-jar-manifest-attributes")
         }
         into("META-INF/maven/${project.group}/${project.name}") {
             from(layout.buildDirectory.dir("publications/${project.name}"))
@@ -123,7 +123,7 @@ tasks {
     named<War>("war") {
         manifest = project.the<JavaPluginExtension>().manifest {
             attributes("Class-Path" to "test1-${project_version}.jar test2-${project_version}.jar",
-                "Comment" to  "manifest by gradle-manifestWar-manifest-attributes")
+                "Comment2" to  "manifest by gradle-war-manifest-attributes")
         }
     }
 

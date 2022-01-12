@@ -29,3 +29,18 @@ dependencies {
     earlib(group = "log4j", name = "log4j", version = "1.2.17")
     earlib("commons-logging:commons-logging:1.2")
 }
+
+tasks {
+
+    named("publishEarPublicationToLocalMavenRepoRepository") {
+        dependsOn("ear")
+    }
+
+    named("build") {
+        dependsOn("ear")
+    }
+
+    named("publish") {
+        dependsOn("build")
+    }
+}

@@ -8,6 +8,7 @@ dependencies {
 }
 
 tasks {
+    compileOnly(project(":ejb2"))
 
     // works only with gradle 7
     named<War>("war") {

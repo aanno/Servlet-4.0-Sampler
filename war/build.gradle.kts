@@ -3,9 +3,9 @@ plugins {
 }
 
 dependencies {
-    implementation("jakarta.servlet:jakarta.servlet-api:5.0.0")
+    compileOnly("jakarta.servlet:jakarta.servlet-api:5.0.0")
+    implementation("commons-codec:commons-codec:1.15")
 }
-
 
 tasks {
 

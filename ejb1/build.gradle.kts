@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    // compileOnly(files("$was_dir/lib/j2ee.jar"))
+    compileOnly("jakarta.platform:jakarta.jakartaee-api:9.1.0")
     compileOnly("log4j:log4j:1.2.17")
 }
 

@@ -25,9 +25,11 @@ repositories {
 
 dependencies {
     deploy(project(":war"))
+    deploy(project(":ejb1"))
+    deploy(project(":ejb2"))
 
     earlib(group = "log4j", name = "log4j", version = "1.2.17")
-    earlib("commons-logging:commons-logging:1.2")
+    // earlib("commons-logging:commons-logging:1.2")
 }
 
 tasks {

@@ -65,7 +65,7 @@ idea {
 
 java {
     // withJavadocJar()
-    withSourcesJar()
+    // withSourcesJar()
 }
 
 tasks {

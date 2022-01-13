@@ -120,6 +120,7 @@ tasks {
             "generatePomFileFor" + project.name.capitalize() + "Publication")
     }
 
+    // works only with gradle 7
     named<War>("war") {
         manifest = project.the<JavaPluginExtension>().manifest {
             attributes("Class-Path" to "test1-${project_version}.jar test2-${project_version}.jar",

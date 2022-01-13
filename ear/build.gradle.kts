@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    deploy(project(":war"))
+    deploy(project(path = ":war", configuration = "archives"))
     deploy(project(":ejb1"))
     deploy(project(":ejb2"))
 

@@ -3,6 +3,7 @@ plugins {
 }
 
 dependencies {
+    // https://github.com/eclipse-ee4j/jakartaee-tutorial-examples/
     compileOnly("jakarta.platform:jakarta.jakartaee-api:9.1.0")
     compileOnly("log4j:log4j:1.2.17")
 }

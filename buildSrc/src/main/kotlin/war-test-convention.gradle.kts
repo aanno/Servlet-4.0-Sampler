@@ -105,6 +105,7 @@ tasks {
     }
 
     // hint (tp): Not working at present!
+    /*
     jar {
         manifest {
             attributes("Class-Path" to "test1-${project_version}.jar test2-${project_version}.jar",
@@ -119,6 +120,7 @@ tasks {
         dependsOn(
             "generatePomFileFor" + project.name.capitalize() + "Publication")
     }
+     */
 
     // works only with gradle 7
     named<War>("war") {
@@ -133,9 +135,11 @@ tasks {
         dependsOn("war")
     }
 
+/*
     named("jar") {
         dependsOn("generateMetadataFileFor" + project.name.capitalize() + "Publication")
     }
+*/
 
     // needed for building war with given manifest
     named("build") {

@@ -4,7 +4,7 @@ plugins {
 
 dependencies {
     compileOnly(project(":ejb2"))
-    
+
     compileOnly("jakarta.servlet:jakarta.servlet-api:5.0.0")
     implementation("commons-codec:commons-codec:1.15")
 }
@@ -12,6 +12,7 @@ dependencies {
 tasks {
 
     // works only with gradle 7
+    /*
     named<War>("war") {
         manifest = project.the<JavaPluginExtension>().manifest {
             attributes(
@@ -20,5 +21,6 @@ tasks {
             )
         }
     }
+     */
 
 }

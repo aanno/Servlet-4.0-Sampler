@@ -1,6 +1,6 @@
 val lint = false
 val project_version = "1.0.0"
-val gradle_version = "7.3.3"
+val gradle_version = "6.9.2"
 
 plugins {
     `java-library`

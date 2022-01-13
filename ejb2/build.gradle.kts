@@ -12,4 +12,12 @@ dependencies {
 }
 
 tasks {
+    jar {
+        manifest {
+            attributes(
+                "Class-Path" to "ejb1.jar",
+                "Comment" to  "manifest by gradle-jar-manifest-attributes"
+            )
+        }
+    }
 }

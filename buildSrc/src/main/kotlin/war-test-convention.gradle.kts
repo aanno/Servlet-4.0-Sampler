@@ -104,42 +104,10 @@ tasks {
         }
     }
 
-    // hint (tp): Not working at present!
-    /*
-    jar {
-        manifest {
-            attributes("Class-Path" to "test1-${project_version}.jar test2-${project_version}.jar",
-                "Comment1" to  "manifest by gradle-jar-manifest-attributes")
-        }
-        into("META-INF/maven/${project.group}/${project.name}") {
-            from(layout.buildDirectory.dir("publications/${project.name}"))
-            rename {
-                it.replace("pom-default.xml", "pom.xml")
-            }
-        }
-        dependsOn(
-            "generatePomFileFor" + project.name.capitalize() + "Publication")
-    }
-     */
-
-    // works only with gradle 7
-    named<War>("war") {
-        manifest = project.the<JavaPluginExtension>().manifest {
-            attributes("Class-Path" to "test1-${project_version}.jar test2-${project_version}.jar",
-                "Comment2" to  "manifest by gradle-war-manifest-attributes")
-        }
-    }
-
     // needed for publishing war with given manifest
     named("generateMetadataFileFor" + project.name.capitalize() + "Publication") {
         dependsOn("war")
     }
-
-/*
-    named("jar") {
-        dependsOn("generateMetadataFileFor" + project.name.capitalize() + "Publication")
-    }
-*/
 
     // needed for building war with given manifest
     named("build") {

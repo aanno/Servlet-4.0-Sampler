@@ -3,12 +3,13 @@ plugins {
 }
 
 dependencies {
+    compileOnly(project(":ejb2"))
+    
     compileOnly("jakarta.servlet:jakarta.servlet-api:5.0.0")
     implementation("commons-codec:commons-codec:1.15")
 }
 
 tasks {
-    compileOnly(project(":ejb2"))
 
     // works only with gradle 7
     named<War>("war") {

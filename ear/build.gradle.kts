@@ -3,11 +3,13 @@ plugins {
     `maven-publish`
 }
 
+val earTask = tasks.named<Ear>("ear")
+
 publishing {
     publications {
         create<MavenPublication>(project.name) {
             // from("$buildDir/libs/ear.ear")
-            artifact("$buildDir/libs/ear.ear")
+            artifact(earTask)
         }
     }
 
